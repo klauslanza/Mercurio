@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Mercurio"
-  s.version          = "0.1.4"
+  s.version          = "0.3.0"
   s.summary          = "Mercurio is a fast way to make an api with AFNetworking and parse the response with Mantle."
   s.homepage         = "https://github.com/stefz/Mercurio"
   s.license          = 'MIT'
@@ -19,12 +19,12 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
+  s.public_header_files = 'Pod/Classes/**/*'
+  s.header_mappings_dir = 'Pod/Classes'
+
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'Mercurio' => ['Pod/Assets/*.png']
-  }
 
   s.dependency 'AFNetworking', '~> 3.0'
   s.dependency 'Mantle', '~> 2.0.6'
-  s.dependency 'SSKeychain', '~> 1.2.3'
+  s.dependency 'SAMKeychain', '~> 1.5.1'
 end
